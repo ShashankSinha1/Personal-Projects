@@ -4,7 +4,7 @@ public class MyAccount {
 
         Shashank.setName("Shashank");
         Shashank.setId("00978993");
-        Shashank.setBalance(4000);
+        Shashank.setBalanceRightNow(4000);
 
 
         Shashank.deposit(220);
@@ -12,7 +12,7 @@ public class MyAccount {
         Shashank.withdraw(50); //food for the month
         Shashank.withdraw(168); //groceries this month
 
-        System.out.println("Balance = " + Shashank.getBalance());
+        System.out.println("Balance = " + Shashank.getBalanceRightNow());
         System.out.println("Number of transactions = " + Shashank.getNumTransactions());
 
     }

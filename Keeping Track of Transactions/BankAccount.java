@@ -1,18 +1,18 @@
 public class BankAccount {
     private String name;
     private String id;
-    private double balance;
+    private double balanceRightNow;
     private int numTransactions;
 
     public BankAccount(String name, String id, double balance, int numTransactions) {
         this.name = name;
         this.id = id;
-        this.balance = balance;
+        this.balanceRightNow = balance;
     }
 
     public BankAccount() {
         this.id = "";
-        this.balance = 0.0;
+        this.balanceRightNow = 0.0;
         this.name = "";
     }
 
@@ -32,12 +32,12 @@ public class BankAccount {
         this.id = id;
     }
 
-    public double getBalance() {
-        return balance;
+    public double getBalanceRightNow() {
+        return balanceRightNow;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBalanceRightNow(double balance) {
+        this.balanceRightNow = balance;
     }
 
     public int getNumTransactions(){
@@ -49,16 +49,16 @@ public class BankAccount {
     }
 
     public void deposit(double amount) {
-        balance += amount;
+        balanceRightNow += amount;
         numTransactions++;
     }
 
     public void withdraw(double amount) {
-        if (balance > amount) {
-            balance -= amount;
+        if (balanceRightNow > amount) {
+            balanceRightNow -= amount;
             numTransactions++;
         }
-        if (balance < amount){
+        if (balanceRightNow < amount){
             System.out.println("You do not have enough money in your balance.");
         }
     }
